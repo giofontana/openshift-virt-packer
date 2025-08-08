@@ -1,4 +1,4 @@
-# openshift-virt-packer
+# Packer for OpenShift Virtualization
 Examples of Packer with OpenShift Virtualization
 
 # Packer installation
