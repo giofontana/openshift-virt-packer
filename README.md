@@ -20,9 +20,10 @@ sudo dnf install qemu-kvm
 # Build image with packer and upload it to OpenShift Virtualization
 
 Follow instructions at:
-fedora/README.md
-rhel9/README.md
-windows/README.md
+
+[fedora/README.md](fedora/README.md)</br>
+[rhel9/README.md](rhel9/README.md)</br>
+[windows/README.md](windows/README.md)</br>
 
 # Building Windows images
 
