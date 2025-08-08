@@ -43,16 +43,6 @@
         <FullName>Administrator</FullName>
         <Organization>My Organization</Organization>
       </UserData>
-      <!--
-      <DriverPaths>
-        <PathAndCredentials wcm:action="add" wcm:keyValue="1">
-            <Path>E:\virtio\viostor\2k19\amd64</Path>
-        </PathAndCredentials>
-         <PathAndCredentials wcm:action="add" wcm:keyValue="2">
-            <Path>E:\virtio\NetKVM\2k19\amd64</Path>
-        </PathAndCredentials>
-      </DriverPaths>      
-      -->
       <EnableFirewall>false</EnableFirewall>
     </component>
     <component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS">

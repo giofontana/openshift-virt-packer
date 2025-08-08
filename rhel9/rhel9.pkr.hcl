@@ -15,9 +15,15 @@ source "qemu" "rhel9" {
   ]
 
   # Use a RHEL ISO locally
-  iso_url = "file:///home/gfontana/Downloads/redhat/rhel-9.6-x86_64-dvd.iso"
-  iso_checksum = "none"
-  
+#  iso_url             = "rhel-9.6-x86_64-dvd.iso"
+#  iso_checksum        = "none"
+
+  # --- ISO and Output Configuration ---
+  iso_url            = "rhel-9.6-x86_64-dvd.iso"
+  iso_checksum       = "none"
+  output_directory   = "output"
+  vm_name            = "rhel9.qcow2"
+
   # SSH credentials defined in ks.cfg
   communicator     = "ssh"
   ssh_username     = "packer"
@@ -35,7 +41,6 @@ source "qemu" "rhel9" {
   ]
 
   # General VM settings
-  output_directory = "output"
   disk_size        = "10G"
   memory           = "4096"
   format           = "qcow2"
@@ -57,13 +62,14 @@ build {
 
   # Final cleanup step to reduce image size
   provisioner "shell" {
-    inline = ["sudo dnf clean all"]
+    #inline = ["sudo dnf clean all"]
+    inline = ["echo 'Build completed'"]
   }
 
   # This block runs after the build is complete
-  post-processor "shell-local" {
-    inline = [
-      "mv output/packer-* output/rhel9.qcow2"
-    ]
-  }  
+#  post-processor "shell-local" {
+#    inline = [
+#      "mv output/packer-* output/rhel9.qcow2"
+#    ]
+#  }  
 }

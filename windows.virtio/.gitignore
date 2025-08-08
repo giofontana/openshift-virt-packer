@@ -1,0 +1,4 @@
+output
+virtio/viostor/*
+virtio/NetKVM/*
+*.iso

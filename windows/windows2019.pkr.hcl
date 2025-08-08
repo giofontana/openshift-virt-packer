@@ -28,9 +28,6 @@ source "qemu" "windows-server-2019" {
   cd_files = [
     "./autounattend.xml",
     "./scripts/Configure-WinRM.ps1",
-    "./scripts/Install-SSH.ps1",
-    "./scripts/winrmConfig.bat",
-    "./virtio/"
   ]
   cd_label = "PACKERDRV" # A label for our driver CD
 
@@ -56,6 +53,10 @@ build {
   sources = ["source.qemu.windows-server-2019"]
 
   provisioner "powershell" {
+
+    elevated_user     = "Administrator"
+    elevated_password = "P@ssw0rd123!"
+
     inline = [
       "Write-Host 'Installing Windows Updates... This may take a long time.'",
       
@@ -69,7 +70,7 @@ build {
       "Install-Module -Name PSWindowsUpdate -Force",
       
       # 4. Finally, run the updates
-      "Get-WindowsUpdate -AcceptAll -Install",
+      "Get-WindowsUpdate -AcceptAll -Install -AutoReboot",
       
       "Write-Host 'Windows Update complete.'"
     ]
