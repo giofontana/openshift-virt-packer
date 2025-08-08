@@ -12,7 +12,7 @@ source "qemu" "windows-server-2019" {
   iso_url            = "Windows2019.iso"
   iso_checksum       = "none"
   output_directory   = "output"
-  vm_name            = "windows-server-2019.qcow2"
+  vm_name            = "windows-server-2019-virtio.qcow2"
 
   # --- Virtual Machine Hardware ---
   accelerator        = "kvm"

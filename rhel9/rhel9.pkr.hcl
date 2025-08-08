@@ -14,10 +14,6 @@ source "qemu" "rhel9" {
     ["-cpu", "host,migratable=on"]
   ]
 
-  # Use a RHEL ISO locally
-#  iso_url             = "rhel-9.6-x86_64-dvd.iso"
-#  iso_checksum        = "none"
-
   # --- ISO and Output Configuration ---
   iso_url            = "rhel-9.6-x86_64-dvd.iso"
   iso_checksum       = "none"
@@ -55,7 +51,7 @@ build {
 
   provisioner "shell" {
     inline = [
-      "sudo dnf update -y",
+      #"sudo dnf update -y",
       "echo 'RHEL image provisioned by Packer' | sudo tee /etc/motd"
     ]
   }
@@ -66,10 +62,4 @@ build {
     inline = ["echo 'Build completed'"]
   }
 
-  # This block runs after the build is complete
-#  post-processor "shell-local" {
-#    inline = [
-#      "mv output/packer-* output/rhel9.qcow2"
-#    ]
-#  }  
 }

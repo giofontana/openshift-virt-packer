@@ -9,9 +9,6 @@ packer {
 
 source "qemu" "fedora" {
 #  qemu_binary = "/usr/libexec/qemu-kvm" # you can set this variable if qemu binary is not on PATH.
-  # 1. Use a Fedora Server ISO
-#  iso_url          = "https://download.fedoraproject.org/pub/fedora/linux/releases/42/Server/x86_64/iso/Fedora-Server-netinst-x86_64-42-1.1.iso"
-#  iso_checksum     = "sha256:231f3e0d1dc8f565c01a9f641b3d16c49cae44530074bc2047fe2373a721c82f"
 
   # --- ISO and Output Configuration ---
   iso_url            = "https://download.fedoraproject.org/pub/fedora/linux/releases/42/Server/x86_64/iso/Fedora-Server-netinst-x86_64-42-1.1.iso"
@@ -60,10 +57,4 @@ build {
     inline = ["sudo dnf clean all"]
   }
 
-  # This block runs after the build is complete
-#  post-processor "shell-local" {
-#    inline = [
-#      "mv output/packer-* output/fedora.qcow2"
-#    ]
-#  }  
 }
