@@ -165,7 +165,7 @@ spec:
 EOF
 ```
 
-4. (optional) Create new Template
+# (Optional) Create new Template
 
 Example:
 ```
@@ -361,7 +361,7 @@ oc process windows2k19-server-medium-custom -n openshift \
   -p ROOT_DISK_SIZE=110Gi | oc -n packer apply -f -
 ```
 
-# Red Hat Advanced Cluster Management
+# (Optional) Red Hat Advanced Cluster Management
 
 Red Hat ACM governance module can be used to distribute the template into multiple clusters.
 
