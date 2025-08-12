@@ -1,4 +1,7 @@
 output
 virtio/viostor/*
 virtio/NetKVM/*
+virtio/guest-agent/*
+*.msi
+*.exe
 *.iso

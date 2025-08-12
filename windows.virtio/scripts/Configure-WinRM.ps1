@@ -1,5 +1,3 @@
-# --- This new block replaces 'winrm quickconfig -q' ---
-
 Write-Host "Enabling WinRM Service..."
 # Ensure the WinRM service is set to start automatically
 Set-Service -Name "WinRM" -StartupType Automatic
