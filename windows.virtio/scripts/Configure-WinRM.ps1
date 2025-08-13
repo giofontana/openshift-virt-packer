@@ -1,3 +1,8 @@
+# Install virtio guest tools
+Write-Host 'Installing vitio guest tools...'
+E:\\virtio\\virtio-win-guest-tools.exe /s /qn
+Write-Host 'QEMU Guest Agent installation complete.'
+
 Write-Host "Enabling WinRM Service..."
 # Ensure the WinRM service is set to start automatically
 Set-Service -Name "WinRM" -StartupType Automatic

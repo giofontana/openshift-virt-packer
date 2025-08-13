@@ -45,18 +45,12 @@ source "qemu" "windows-server-2019" {
 build {
   sources = ["source.qemu.windows-server-2019"]
 
-
   provisioner "powershell" {
 
     elevated_user     = "Administrator"
     elevated_password = "P@ssw0rd123!"
 
-    inline = [
-      # Install virtio guest tools
-      "Write-Host 'Installing vitio guest tools...'",
-      "E:\\virtio\\virtio-win-guest-tools.exe /s /qn",
-      "Write-Host 'QEMU Guest Agent installation complete.'",
-
+    inline = [  
       "Write-Host 'Installing Windows Updates... This may take a long time.'",   
       # 1. Install the NuGet package provider non-interactively
       "Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force",
