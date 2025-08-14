@@ -149,6 +149,7 @@ EOF
 
 Example:
 ```
+cat <<EOF | oc apply -f -
 apiVersion: cdi.kubevirt.io/v1beta1
 kind: DataSource
 metadata:
