@@ -94,19 +94,13 @@ virtctl image-upload dv <image>-dv \
 
 Example:
 ```
-virtctl image-upload dv win2k19-custom \  
+virtctl image-upload dv win2k19-custom \
   --image-path=./output/windows-server-2019-virtio.qcow2 \
   --size=100Gi \
   --access-mode=ReadWriteOnce \
   --storage-class=ocs-storagecluster-ceph-rbd-virtualization \
   --insecure \
   -n openshift-virtualization-os-images
-```
-
-Note: You may need to fix qcow2 file permissions before the previous `virtctl` command:
-
-```
-chmod 660 ./output/windows-server-2019-virtio.qcow2
 ```
 
 2. (Optional) Create a new VirtualMachineClusterPreference.
