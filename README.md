@@ -322,9 +322,6 @@ objects:
                 frequencies: {}
                 vapic: {}
               smm: {}
-            firmware:
-              bootloader:
-                preferredUseBios: true
             memory:
               guest: 4Gi
           networks:
