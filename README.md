@@ -103,6 +103,12 @@ virtctl image-upload dv win2k19-custom \
   -n openshift-virtualization-os-images
 ```
 
+Note: You may need to fix qcow2 file permissions before the previous `virtctl` command:
+
+```
+chmod 660 ./output/windows-server-2019-virtio.qcow2
+```
+
 2. (Optional) Create a new VirtualMachineClusterPreference.
 
 Example:
