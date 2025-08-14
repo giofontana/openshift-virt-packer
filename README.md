@@ -94,9 +94,9 @@ virtctl image-upload dv <image>-dv \
 
 Example:
 ```
-virtctl image-upload dv rhel9-custom-dv \
-  --image-path=./output/rhel9.qcow2 \
-  --size=30Gi \
+virtctl image-upload dv win2k19-custom \  
+  --image-path=./output/windows-server-2019-virtio.qcow2 \
+  --size=100Gi \
   --access-mode=ReadWriteOnce \
   --storage-class=ocs-storagecluster-ceph-rbd-virtualization \
   --insecure \
@@ -116,14 +116,14 @@ metadata:
     kubevirt.io/install-strategy-registry: ''
     openshift.io/display-name: Microsoft Windows Server 2019
     openshift.io/documentation-url: 'https://access.redhat.com'
-    tags: 'hidden,kubevirt,rhel'
+    tags: 'hidden,kubevirt,windows'
     openshift.io/support-url: 'https://access.redhat.com'
-    iconClass: icon-rhel
+    iconClass: icon-windows
     openshift.io/provider-display-name: Red Hat
   labels:
     instancetype.kubevirt.io/arch: amd64
     instancetype.kubevirt.io/common-instancetypes-version: 1.2.1-34-g416eceef
-    instancetype.kubevirt.io/os-type: linux
+    instancetype.kubevirt.io/os-type: windows
     instancetype.kubevirt.io/vendor: redhat.com
   name: win2k19-custom
 spec:
