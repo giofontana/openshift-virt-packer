@@ -262,7 +262,7 @@ objects:
             storage:
               resources:
                 requests:
-                  storage: '${ROOT_DISK_SIZE}'
+                  storage: 120Gi
       runStrategy: Halted
       template:
         metadata:
@@ -346,9 +346,6 @@ parameters:
   - name: DATA_SOURCE_NAMESPACE
     description: Namespace of the DataSource
     value: openshift-virtualization-os-images
-  - name: ROOT_DISK_SIZE
-    description: Size of the root disk
-    value: 120Gi    
 EOF
 ```
 
