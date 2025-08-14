@@ -170,7 +170,7 @@ EOF
 
 Example:
 ```
-cat <<EOF | oc apply -f -
+cat <<'EOF' | oc apply -f -
 kind: Template
 apiVersion: template.openshift.io/v1
 metadata:
@@ -342,7 +342,7 @@ parameters:
     from: 'win2019-custom-[a-z0-9]{6}'
   - name: DATA_SOURCE_NAME
     description: Name of the DataSource to clone
-    value: win2k19
+    value: win2k19-custom-golden-image
   - name: DATA_SOURCE_NAMESPACE
     description: Namespace of the DataSource
     value: openshift-virtualization-os-images
